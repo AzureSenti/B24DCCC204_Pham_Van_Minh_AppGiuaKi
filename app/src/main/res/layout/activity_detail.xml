@@ -3,19 +3,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/background_light"
 
+    android:padding="16dp"
+    android:layout_marginTop="35dp"
+    android:gravity="center_horizontal">
+
+    <!-- Tiêu đề trang -->
     <TextView
-        android:id="@+id/tvDetailInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHI TIẾT NHÂN VIÊN"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        android:layout_marginBottom="24dp"
+        android:elevation="4dp" />
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:lineSpacingExtra="4dp" />
+        android:layout_marginBottom="24dp"
+>
 
+        <LinearLayout
+            android:id="@+id/layoutInfoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvDetailInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/text_primary"
+                android:lineSpacingExtra="6dp"
+                android:padding="4dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
     <Button
         android:id="@+id/btnBack"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Quay lại" />
+        android:layout_height="48dp"
+        android:text="Quay lại danh sách"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:backgroundTint="@color/aqua_primary"
+        android:layout_marginTop="8dp"
+        />
 </LinearLayout>

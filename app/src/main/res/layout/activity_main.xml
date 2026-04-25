@@ -3,78 +3,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:layout_marginTop="35dp"
+    android:background="@color/background_light">
 
+
+    <!-- Thanh tìm kiếm -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
 
         <EditText
             android:id="@+id/etSearch"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            android:hint="Tìm theo tên" />
+            android:hint="🔍 Tìm theo tên..."
+            android:background="@drawable/bg_edittext"
+            android:paddingHorizontal="12dp" />
 
         <Button
             android:id="@+id/btnSearch"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tìm" />
+            android:layout_height="48dp"
+            android:text="Tìm"
+            android:textColor="@color/white"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_button_aqua" />
     </LinearLayout>
 
+    <!-- Bộ lọc -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical">
 
         <Spinner
             android:id="@+id/spTypeFilter"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            android:entries="@array/employee_types" />
+            android:background="@drawable/bg_edittext"
+            android:entries="@array/employee_types"
+            android:paddingHorizontal="8dp" />
 
         <Button
             android:id="@+id/btnFilter"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lọc" />
+            android:layout_height="48dp"
+            android:text="Lọc"
+            android:textColor="@color/white"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_button_aqua" />
     </LinearLayout>
 
+    <!-- Sắp xếp và lương cao nhất -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp">
 
         <Button
             android:id="@+id/btnSortSalary"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="Sắp xếp lương ↓" />
+            android:text="Sắp xếp ▼"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_button_aqua" />
 
         <Button
             android:id="@+id/btnHighestSalary"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="Lương cao nhất" />
+            android:text="Lương cao nhất"
+            android:textColor="@color/white"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_button_aqua" />
     </LinearLayout>
 
+    <!-- Danh sách nhân viên -->
     <ListView
         android:id="@+id/lvEmployees"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="8dp" />
+        android:divider="@color/divider"
+        android:dividerHeight="1dp"
+        android:paddingTop="4dp" />
 
+    <!-- Nút thêm nhân viên nổi bật -->
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="THÊM NHÂN VIÊN" />
+        android:layout_height="56dp"
+        android:text="THÊM NHÂN VIÊN"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_button_aqua"
+        android:layout_marginTop="12dp" />
 </LinearLayout>
