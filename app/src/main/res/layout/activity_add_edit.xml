@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loại nhân viên:"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton android:id="@+id/rbStaff" android:text="Staff"
+                android:layout_width="10px"
+                android:layout_height="10px"/>
+            <RadioButton android:id="@+id/rbManager" android:text="Manager"
+                android:layout_width="10px"
+                android:layout_height="10px"/>
+            <RadioButton android:id="@+id/rbIntern" android:text="Intern"
+                android:layout_width="10px"
+                android:layout_height="10px"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etMaNV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mã nhân viên" />
+
+        <EditText
+            android:id="@+id/etHoTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Họ tên" />
+
+        <EditText
+            android:id="@+id/etLuongCoBan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lương cơ bản (>0)"
+            android:inputType="numberDecimal" />
+
+        <!-- Trường thay đổi theo loại -->
+        <TextView
+            android:id="@+id/tvExtraLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số ngày công:"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/etExtra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập giá trị"
+            android:inputType="number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lưu" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hủy" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
